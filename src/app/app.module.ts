@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UsersComponent } from './users/users.component';
 import { UserDettailComponent } from './user-dettail/user-dettail.component';
 import { FormsModule } from '@angular/forms';
+import { UcFirstPipe } from './uc-first.pipe';
 
 registerLocaleData(localeIt);
 @NgModule({
@@ -20,6 +21,7 @@ registerLocaleData(localeIt);
     NavbarComponent,
     UsersComponent,
     UserDettailComponent,
+    UcFirstPipe,
   ],
   imports: [
     BrowserModule,
