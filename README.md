@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AngularUms
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# angular-ums
+Esercitazione Angular
+>>>>>>> e02798dd2cd357b8dc72e5d49c185b82dbae9d57
