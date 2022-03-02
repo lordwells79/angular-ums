@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row">{{ user.id }}</th>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.address }}</td>
+      <td>
+        <div class="row">
+          <div class="col sm-6">
+            <button class="btn btn-warning">
+              <fa-icon [icon]="faPencilAlt"></fa-icon>
+            </button>
+          </div>
+          <div class="col sm-6">
+            <button class="btn btn-danger">
+              <fa-icon [icon]="faTrash"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
