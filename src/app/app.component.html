@@ -1,9 +1,13 @@
-<app-navbar></app-navbar>
-<div class="row">
-  <div class="col-sm-7">
-    <app-users></app-users>
+<app-navbar (newUserEvent)="onUserCreate()"></app-navbar>
+<main class="container">
+  <div>{{ "4500.55" | currency: "EUR":"code":"4.2-4":"it" }}</div>
+  <div>{{ osci | date: "full":"+1":"it" }}</div>
+  <div class="row">
+    <div class="col-sm-7">
+      <app-users (userUpdate)="onUpdate($event)"></app-users>
+    </div>
+    <div class="col-sm-5">
+      <app-user-dettail *ngIf="showForm" [user]="user"></app-user-dettail>
+    </div>
   </div>
-  <div class="col-sm-5">
-    <app-user-dettail></app-user-dettail>
-  </div>
-</div>
+</main>
