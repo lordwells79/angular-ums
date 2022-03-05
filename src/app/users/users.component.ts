@@ -1,3 +1,4 @@
+import { User } from './../Classes/user';
 import { UserService } from './../services/user.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faPencilAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -18,8 +19,11 @@ export class UsersComponent implements OnInit {
   faPencilAlt = faPencilAlt;
   faTrash = faTrash;
 
-  onUserUpdate(user: any) {
+  onUserUpdate(user: User) {
     const userCopy = Object.assign({}, user);
     this.userUpdate.emit(userCopy);
+  }
+  onUserDelete(user: User) {
+    this.userService.deleteUser(user);
   }
 }

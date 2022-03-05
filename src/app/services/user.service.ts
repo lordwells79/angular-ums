@@ -1,7 +1,6 @@
+import { User } from './../Classes/user';
 import { UserInterface } from '../interfaces/UserInterface';
 import { Injectable } from '@angular/core';
-import { User } from '../Classes/user';
-
 @Injectable({
   providedIn: 'root',
 })
@@ -46,5 +45,11 @@ export class UserService {
   }
   createUser(user: UserInterface) {
     this.users.splice(0, 0, { ...user });
+  }
+  deleteUser(user: User) {
+    const index = this.users.indexOf(user);
+    if (index > -1) {
+      this.users.splice(index, 1);
+    }
   }
 }

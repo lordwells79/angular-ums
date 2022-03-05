@@ -28,7 +28,7 @@
           </div>
           <div class="col sm-6">
             <button class="btn btn-danger">
-              <fa-icon [icon]="faTrash"></fa-icon>
+              <fa-icon (click)="onUserDelete(user)" [icon]="faTrash"></fa-icon>
             </button>
           </div>
         </div>

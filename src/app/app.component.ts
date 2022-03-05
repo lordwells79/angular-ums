@@ -8,13 +8,11 @@ import { User } from './Classes/user';
 })
 export class AppComponent {
   title = 'angular-ums';
-  selected = false;
   user: User = new User();
   showForm: boolean = false;
   osci = new Date();
 
   onUpdate(user: User) {
-    this.selected = true;
     this.user = user;
     this.showForm = true;
   }
